@@ -23,10 +23,16 @@ public class Controller implements Serializable {
      */
     private static final long serialVersionUID = 1L;
 
+    /**
+     * Id of the Entoity
+     */
     @Id
     @GeneratedValue
     private Long id;
 
+    /**
+     * Controller name
+     */
     @Column(nullable = false)
     private String name;
 
@@ -35,25 +41,6 @@ public class Controller implements Serializable {
      */
     @OneToMany(mappedBy = "controller", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Agent> agents;
-
-    /**
-     * Constructor
-     *
-     */
-    protected Controller() {
-
-    }
-
-    /**
-     * Constructor
-     *
-     * @param name
-     */
-    public Controller(String name) {
-        super();
-        this.name = name;
-    }
-
 
     /**
      * @return the id
@@ -84,11 +71,6 @@ public class Controller implements Serializable {
     }
 
 
-    @Override
-    public String toString() {
-        return getName();
-    }
-
     /**
      * @return the agents
      */
@@ -101,5 +83,15 @@ public class Controller implements Serializable {
      */
     public void setAgents(List<Agent> agents) {
         this.agents = agents;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see java.lang.Object#toString()
+     */
+    @Override
+    public String toString() {
+        return getName();
     }
 }
