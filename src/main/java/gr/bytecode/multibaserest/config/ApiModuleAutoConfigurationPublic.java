@@ -7,9 +7,6 @@ import org.springframework.web.servlet.DispatcherServlet;
 
 /**
  * Configuration for the Public API
- * 
- * @author Dimi Balaouras
- * @copyright Bytecode.gr 2015
  */
 @Configuration
 public class ApiModuleAutoConfigurationPublic extends

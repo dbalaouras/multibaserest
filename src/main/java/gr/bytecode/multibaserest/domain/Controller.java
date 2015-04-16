@@ -27,9 +27,6 @@ import javax.persistence.OneToMany;
 
 /**
  * A Controller Entity
- * 
- * @author Dimi Balaouras
- * @copyright Bytecode.gr 2015
  */
 @Entity
 public class Controller implements Serializable {

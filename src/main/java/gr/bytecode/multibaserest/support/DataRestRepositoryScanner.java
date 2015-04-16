@@ -7,9 +7,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 /**
  * Scans for {@link RepositoryRestResource} Interfaces
- * 
- * @author Dimi Balaouras
- * @copyright Bytecode.gr 2015
  */
 public class DataRestRepositoryScanner extends ClassPathScanningCandidateComponentProvider {
 

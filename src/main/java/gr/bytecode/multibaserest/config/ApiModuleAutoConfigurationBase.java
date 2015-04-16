@@ -12,8 +12,6 @@ import org.springframework.web.servlet.DispatcherServlet;
 /**
  * Base class for Spring Data REST API module configurations
  * 
- * @author Dimi Balaouras
- * @copyright Bytecode.gr 2015
  * @param <T>
  */
 public abstract class ApiModuleAutoConfigurationBase<T> {
@@ -42,7 +40,6 @@ public abstract class ApiModuleAutoConfigurationBase<T> {
     public static final String BASE_API_PATH = "api";
 
     /**
-     * description
      *
      * @return
      */

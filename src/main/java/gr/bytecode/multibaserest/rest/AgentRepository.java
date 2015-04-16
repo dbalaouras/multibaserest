@@ -8,9 +8,6 @@ import org.springframework.stereotype.Repository;
 
 /**
  * A {@link Repository} of {@link Agent} Resources
- * 
- * @author Dimi Balaouras
- * @copyright Bytecode.gr 2015
  */
 @PrivateResource
 @Repository

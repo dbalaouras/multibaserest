@@ -7,9 +7,6 @@ import java.lang.annotation.Target;
 
 /**
  * Marks a RESTful API Resource as private
- * 
- * @author Dimi Balaouras
- * @copyright Bytecode.gr 2015
  */
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)

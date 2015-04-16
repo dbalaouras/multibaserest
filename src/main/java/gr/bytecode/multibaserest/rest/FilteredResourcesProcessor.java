@@ -28,9 +28,6 @@ import org.springframework.stereotype.Component;
 
 /**
  * {@link ResourceProcessor} for the Root elements.
- * 
- * @author Dimi Balaouras
- * @copyright Bytecode.gr 2015
  */
 @Component
 public class FilteredResourcesProcessor implements ResourceProcessor<RepositoryLinksResource> {
@@ -141,11 +138,12 @@ public class FilteredResourcesProcessor implements ResourceProcessor<RepositoryL
     @Override
     public RepositoryLinksResource process(RepositoryLinksResource resource) {
 
-
+        // TODO: check the Request URL to determine if this is a request on public or private
+        // base url
         boolean isRequestingPublic = true;
 
         if (isRequestingPublic) {
-            
+
             // Remove all links from the Resource
             resource.removeLinks();
 
@@ -153,9 +151,9 @@ public class FilteredResourcesProcessor implements ResourceProcessor<RepositoryL
             resource.add(publicLinks);
 
         } else {
-            // to nothing
-        }
 
+            // Private resource; to nothing
+        }
 
         return resource;
     }

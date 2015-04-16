@@ -9,9 +9,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * Provides Configuration for the RESTful APIs
- * 
- * @author Dimi Balaouras
- * @copyright Bytecode.gr 2015
  */
 abstract public class RestConfigBase extends RepositoryRestMvcConfiguration {
 

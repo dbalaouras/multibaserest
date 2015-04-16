@@ -13,9 +13,6 @@ import javax.persistence.ManyToOne;
 
 /**
  * An Agent Resource
- * 
- * @author Dimi Balaouras
- * @copyright Bytecode.gr 2015
  */
 @Entity
 public class Agent implements Serializable {
