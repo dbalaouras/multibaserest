@@ -12,6 +12,6 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 @RepositoryRestResource(collectionResourceRel = "controllers", path = "controllers")
-interface ControllerRepository extends PagingAndSortingRepository<Controller, Long> {
+public interface ControllerRepository extends PagingAndSortingRepository<Controller, Long> {
 
 }

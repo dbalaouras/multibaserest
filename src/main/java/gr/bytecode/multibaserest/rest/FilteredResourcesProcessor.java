@@ -24,12 +24,10 @@ import org.springframework.data.rest.core.mapping.ResourceMetadata;
 import org.springframework.data.rest.webmvc.RepositoryLinksResource;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.ResourceProcessor;
-import org.springframework.stereotype.Component;
 
 /**
  * {@link ResourceProcessor} for the Root elements.
  */
-@Component
 public class FilteredResourcesProcessor implements ResourceProcessor<RepositoryLinksResource> {
 
     /**
@@ -138,22 +136,22 @@ public class FilteredResourcesProcessor implements ResourceProcessor<RepositoryL
     @Override
     public RepositoryLinksResource process(RepositoryLinksResource resource) {
 
-        // TODO: check the Request URL to determine if this is a request on public or private
-        // base url
-        boolean isRequestingPublic = true;
-
-        if (isRequestingPublic) {
-
-            // Remove all links from the Resource
-            resource.removeLinks();
-
-            // Add the public links
-            resource.add(publicLinks);
-
-        } else {
-
-            // Private resource; to nothing
-        }
+        // // TODO: check the Request URL to determine if this is a request on public or private
+        // // base url
+        // boolean isRequestingPublic = true;
+        //
+        // if (isRequestingPublic) {
+        //
+        // // Remove all links from the Resource
+        // resource.removeLinks();
+        //
+        // // Add the public links
+        // resource.add(publicLinks);
+        //
+        // } else {
+        //
+        // // Private resource; to nothing
+        // }
 
         return resource;
     }

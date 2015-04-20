@@ -49,7 +49,7 @@ public abstract class ApiModuleAutoConfigurationBase<T> {
                 new AnnotationConfigWebApplicationContext();
 
         webContext.setParent(applicationContext);
-        webContext.register(getApiModuleConfigurationClass());
+        webContext.register(RestConfigBase.class);
         webContext.refresh();
 
 
@@ -90,12 +90,5 @@ public abstract class ApiModuleAutoConfigurationBase<T> {
      * @return
      */
     protected abstract String getApiModulePath();
-
-    /**
-     * Get the type of the REST module configuration class
-     *
-     * @return
-     */
-    protected abstract Class<T> getApiModuleConfigurationClass();
 
 }

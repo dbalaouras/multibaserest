@@ -9,9 +9,8 @@ import org.springframework.stereotype.Repository;
 /**
  * A {@link Repository} of {@link Agent} Resources
  */
-@PrivateResource
 @Repository
 @RepositoryRestResource(collectionResourceRel = "agents", path = "agents")
-interface AgentRepository extends PagingAndSortingRepository<Agent, Long> {
+public interface AgentRepository extends PagingAndSortingRepository<Agent, Long> {
 
 }

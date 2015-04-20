@@ -2,6 +2,7 @@ package gr.bytecode.multibaserest.config;
 
 import java.text.SimpleDateFormat;
 
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration;
 
@@ -10,7 +11,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 /**
  * Provides Configuration for the RESTful APIs
  */
-abstract public class RestConfigBase extends RepositoryRestMvcConfiguration {
+@EnableJpaRepositories
+public class RestConfigBase extends RepositoryRestMvcConfiguration {
 
     /**
      * The default date format to use when JSON-serializing the RESTful API Resources. (See
@@ -19,13 +21,6 @@ abstract public class RestConfigBase extends RepositoryRestMvcConfiguration {
     static final SimpleDateFormat REST_API_DATE_FORMAT = new SimpleDateFormat(
             "yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
 
-
-    /**
-     * Get the base URI of a REST API module
-     *
-     * @return
-     */
-    abstract public String getModuleBaseURI();
 
     /*
      * (non-Javadoc)

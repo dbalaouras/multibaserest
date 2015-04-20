@@ -10,7 +10,7 @@ import org.springframework.web.servlet.DispatcherServlet;
  */
 @Configuration
 public class ApiModuleAutoConfigurationPublic extends
-        ApiModuleAutoConfigurationBase<RestConfigPublic> {
+        ApiModuleAutoConfigurationBase<RestConfigBase> {
 
     public static final String API_MODULE_PUBLIC_DISPATCHER_SERVLET_BEAN_NAME =
             "apiModulePublicDispatcherServlet";
@@ -59,17 +59,6 @@ public class ApiModuleAutoConfigurationPublic extends
     @Override
     protected String getApiModulePath() {
         return MODULE_PATH;
-    }
-
-    /*
-     * (non-Javadoc)
-     * 
-     * @see gr.bytecode.multibaserest.config.AbstractApiModuleAutoConfiguration#
-     * getApiModuleConfigurationClass()
-     */
-    @Override
-    protected Class<RestConfigPublic> getApiModuleConfigurationClass() {
-        return RestConfigPublic.class;
     }
 
 }
