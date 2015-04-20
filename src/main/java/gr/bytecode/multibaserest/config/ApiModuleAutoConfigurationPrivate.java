@@ -12,7 +12,7 @@ import org.springframework.web.servlet.DispatcherServlet;
 public class ApiModuleAutoConfigurationPrivate extends
         ApiModuleAutoConfigurationBase<RestConfigBase> {
 
-    public static final String API_MODULE_A_DISPATCHER_SERVLET_BEAN_NAME =
+    public static final String API_MODULE_PRIVATE_DISPATCHER_SERVLET_BEAN_NAME =
             "apiModulePrivateDispatcherServlet";
 
     public static final String API_MODULE_PRIVATE_DISPATCHER_SERVLET_REGISTRATION_BEAN_NAME =
@@ -26,7 +26,7 @@ public class ApiModuleAutoConfigurationPrivate extends
      *
      * @return
      */
-    @Bean(name = API_MODULE_A_DISPATCHER_SERVLET_BEAN_NAME)
+    @Bean(name = API_MODULE_PRIVATE_DISPATCHER_SERVLET_BEAN_NAME)
     public DispatcherServlet apiModuleADispatcherServlet() {
         return createApiModuleDispatcherServlet();
     }
@@ -49,7 +49,7 @@ public class ApiModuleAutoConfigurationPrivate extends
      */
     @Override
     protected String getApiModuleDispatcherServletBeanName() {
-        return API_MODULE_A_DISPATCHER_SERVLET_BEAN_NAME;
+        return API_MODULE_PRIVATE_DISPATCHER_SERVLET_BEAN_NAME;
     }
 
     /*
