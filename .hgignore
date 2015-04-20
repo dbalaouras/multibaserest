@@ -1,7 +1,0 @@
-syntax: regexp
-(\.project|\.classpath|\.settings/|bin/|lib/|WebContent/|target/|\.iml|\.idea/|\.log|\.jazzignore|\.h2\.db|\.trace\.db|\.lock\.db|activemq-data|\.pkc|\.uuid|\.pyc|\.pydevproject|\.orig|\.rej)
-^.*/targetPlatform/
-^.*\.target
-application-development\.properties
-^.*/test-output/
-^configserver/config
